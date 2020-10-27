@@ -1,10 +1,12 @@
 import React from 'react';
+import PracticeDashboard from '../../features/practices/practicesDashboard/PracticeDashboards';
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>RFF</h1>
+    <div>
+      <h1>BJB Practices</h1>
+      <PracticeDashboard />
     </div>
   );
 }
