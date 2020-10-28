@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import NavBar from '../../features/nav/NavBar';
 import PracticeDashboard from '../../features/practices/practicesDashboard/PracticeDashboards';
-
+import {  Container } from 'semantic-ui-react';
 
 function App() {
   return (
-    <div>
-      <h1>BJB Practices</h1>
-      <PracticeDashboard />
-    </div>
+    <Fragment>
+      <NavBar />
+      <Container className='main'>
+        <PracticeDashboard />
+      </Container>
+    </Fragment>
   );
 }
 
