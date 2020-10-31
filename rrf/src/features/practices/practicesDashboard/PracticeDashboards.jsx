@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
+import PracticeForm from '../eventFrom/PracticeForm';
 import PracticeList from './PracticeList';
 
 export default function PracticeDashboard() {
@@ -9,7 +10,7 @@ export default function PracticeDashboard() {
                 <PracticeList />
             </Grid.Column>
             <Grid.Column width={6}>
-                <h3>Right Col</h3>
+                <PracticeForm />
             </Grid.Column>
         </Grid>
     )
