@@ -2,17 +2,17 @@ import React from 'react';
 import { Segment, Button, Item, Icon, List } from 'semantic-ui-react'
 import PracticeListAttendee from '../PracticeListAttendee';
 
-export default function PracticeListItem() {
+export default function PracticeListItem({practice}) {
     return (
         <Segment.Group>
             <Segment>
                 <Item.Group>
                     <Item>
-                        <Item.Image size='tiny' circular src='https://via.placeholder.com/150' />
+                        <Item.Image size='tiny' circular src={practice.hostPhotoURL} />
                         <Item.Content>
-                            <Item.Header content='Practice Title' />
+                            <Item.Header content={practice.title} />
                             <Item.Description>
-                                Hosted By SirGirth
+                                Hosted By {practice.hostedBy}
                             </Item.Description>
                         </Item.Content>
                     </Item>
@@ -20,21 +20,21 @@ export default function PracticeListItem() {
             </Segment>
             <Segment>
                 <span>
-                    <Icon name='clock' /> Date
-                    <Icon name='marker' /> Location
+                    <Icon name='clock' /> {practice.date}
+                    <Icon name='marker' /> {practice.venue}
                 </span>
             </Segment>
             <Segment secondary>
                 <List horizontal>
-                   <PracticeListAttendee />
-                   <PracticeListAttendee />
-                   <PracticeListAttendee />
-                   <PracticeListAttendee />
-                   <PracticeListAttendee />
+                   {practice.attendees.map(attendee => (
+                   <PracticeListAttendee key={attendee.id} attendee={attendee} />                    
+                   ))}
+
+
                 </List>
             </Segment>
             <Segment clearing> {/* Clears any previous floats */}
-                <div>Description of Event</div>
+                <div>{practice.description}</div>
                 <Button color='teal' floated='right' content='View' />
             </Segment>
         </Segment.Group>

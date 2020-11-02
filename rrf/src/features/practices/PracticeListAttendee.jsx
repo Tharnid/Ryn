@@ -1,10 +1,10 @@
 import React from 'react';
 import { List, Image } from 'semantic-ui-react';
 
-export default function PracticeListAttendee() {
+export default function PracticeListAttendee({attendee}) {
     return (
         <List.Item>
-            <Image size='mini' circular src='https://via.placeholder.com/150' />
+            <Image size='mini' circular src={attendee.photoURL} />
         </List.Item>
     )
 }
