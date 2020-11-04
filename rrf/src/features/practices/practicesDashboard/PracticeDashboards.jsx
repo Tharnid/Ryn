@@ -4,7 +4,7 @@ import PracticeForm from '../eventFrom/PracticeForm';
 import PracticeList from './PracticeList';
 import {sampleData} from '../../../app/api/sampleData';
 
-export default function PracticeDashboard({formOpen}) {
+export default function PracticeDashboard({formOpen, setFormOpen}) {
     const [practices, setPractices] = useState(sampleData);
     
     return (
@@ -14,7 +14,7 @@ export default function PracticeDashboard({formOpen}) {
             </Grid.Column>
             <Grid.Column width={6}>
                 {formOpen &&
-                <PracticeForm />}
+                <PracticeForm setFormOpen={setFormOpen} />}
             </Grid.Column>
         </Grid>
     )
