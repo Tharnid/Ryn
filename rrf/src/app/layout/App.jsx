@@ -1,17 +1,18 @@
-import React, {Fragment} from 'react';
+import React, {useState} from 'react';
 import NavBar from '../../features/nav/NavBar';
 import PracticeDashboard from '../../features/practices/practicesDashboard/PracticeDashboards';
 import {  Container } from 'semantic-ui-react';
 
-function App() {
+export default function App() {
+  const [formOpen, setFormOpen] = useState(false);
+  
   return (
-    <Fragment>
-      <NavBar />
+    <>
+      <NavBar setFormOpen={setFormOpen} />
       <Container className='main'>
-        <PracticeDashboard />
+        <PracticeDashboard formOpen={formOpen} />
       </Container>
-    </Fragment>
+    </>
   );
 }
 
-export default App;

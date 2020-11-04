@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Segment, Form, Button } from 'semantic-ui-react';
 
-export default function PracticeForm() {
+export default function PracticeForm({setFormOpen}) {
     return (
         <Segment clearing>
             <Header content='Create new practice'/>
@@ -22,7 +22,7 @@ export default function PracticeForm() {
                     <input type="date" placeholder='Date'/>
                 </Form.Field>
                 <Button type='submit' floated='right' positive content='Submit' />
-                <Button type='submit' floated='right'  content='Cancel' />
+                <Button onClick={() => setFormOpen(false)} type='submit' floated='right'  content='Cancel' />
             </Form>
         </Segment>
     )

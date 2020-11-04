@@ -2,10 +2,10 @@ import React from 'react';
 // import { Segment, Item } from 'semantic-ui-react';
 import PracticeListItem from './PracticeListItem';
 
-export default function PracticeList({practice}) {
+export default function PracticeList({practices}) {
     return (
         <>
-            {practice.map(practice => (
+            {practices.map(practice => (
             <PracticeListItem practice={practice} key={practice.id}/>                
             ))}
 

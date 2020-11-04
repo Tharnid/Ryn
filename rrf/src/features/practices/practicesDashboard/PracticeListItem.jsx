@@ -8,7 +8,7 @@ export default function PracticeListItem({practice}) {
             <Segment>
                 <Item.Group>
                     <Item>
-                        <Item.Image size='tiny' circular src={practice.hostPhotoURL} />
+                        <Item.Image size='tiny' circular src={PracticeListAttendee.hostPhotoURL} />
                         <Item.Content>
                             <Item.Header content={practice.title} />
                             <Item.Description>
