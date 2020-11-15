@@ -6,6 +6,10 @@ import {sampleData} from '../../../app/api/sampleData';
 
 export default function PracticeDashboard({formOpen, setFormOpen}) {
     const [practices, setPractices] = useState(sampleData);
+
+    function handleCreatePractice(practice) {
+        setPractices([...practices, practice])
+    }
     
     return (
         <Grid>
@@ -14,7 +18,11 @@ export default function PracticeDashboard({formOpen, setFormOpen}) {
             </Grid.Column>
             <Grid.Column width={6}>
                 {formOpen &&
-                <PracticeForm setFormOpen={setFormOpen} />}
+                <PracticeForm 
+                    setFormOpen={setFormOpen} 
+                    setPractices={setPractices} 
+                    createPractice={handleCreatePractice} 
+                />}
             </Grid.Column>
         </Grid>
     )

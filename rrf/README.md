@@ -1,3 +1,7 @@
+https://via.placeholder.com/150
+
+C/O https://placeholder.com/ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
